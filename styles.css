@@ -64,7 +64,9 @@ select,
 }
 img {
   border: 10px double rgb(162, 250, 250);
-  outline: none;
+  /* outline: none; */
+  max-width: 400px;
+  max-height: 400px;
 }
 button:focus,
 select:focus {
