@@ -64,4 +64,8 @@ select,
 }
 img {
   border: 10px double rgb(162, 250, 250);
+  outline: none;
+}
+button:focus {
+  outline: none;
 }
