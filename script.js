@@ -30,6 +30,7 @@ function new_image() {
 
   let api_link = "https://dog.ceo/api/breed/" + query + "/images/random";
   $("#canvas img").remove();
+
   $.get(api_link, function (data) {
     let image = data.message;
     console.log(image);
@@ -51,5 +52,14 @@ getButton.click(function () {
 });
 
 next.click(function () {
+  $("#next").attr("disabled", true);
+  setTimeout(function () {
+    $("#next").removeAttr("disabled");
+  }, 300);
+
   new_image();
+});
+
+next.dblclick(function () {
+  $("#canvas img").remove();
 });
